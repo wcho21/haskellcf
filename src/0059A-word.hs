@@ -5,9 +5,7 @@ main = do
   putStrLn(solve s)
 
 solve :: String -> String
-solve s
-  | hasMoreUpper s = map toUpper s
-  | otherwise = map toLower s
+solve s = map (if hasMoreUpper s then toUpper else toLower) s
 
 hasMoreUpper :: String -> Bool
 hasMoreUpper s = if countUpper s * 2 > len then True else False
