@@ -13,4 +13,4 @@ hasMoreUpper s = if countUpper s * 2 > len then True else False
         numUpper = countUpper s
 
 countUpper :: String -> Int
-countUpper s = sum(map(\c -> if isUpper c then 1 else 0) s)
+countUpper s = sum $ map(\c -> if isUpper c then 1 else 0) s
